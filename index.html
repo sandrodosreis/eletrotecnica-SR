@@ -42,6 +42,33 @@
       z-index: 400;
     }
 
+    @media (max-width: 600px) {
+      .logo-canto {
+        display: block;
+        width: 100px;
+        margin: 10px auto;
+      }
+
+      .menu-contato,
+      .logo-canto,
+      .menu-responsavel {
+        position: static;
+        margin: 10px auto;
+        text-align: center;
+        width: 90%;
+      }
+
+      header, section {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .hamburger-menu {
+        position: static;
+        margin: 10px auto;
+      }
+    }
+
     header {
       background-color: rgba(0, 51, 102, 0.8);
       color: black;
@@ -168,32 +195,6 @@
     .menu-responsavel.show {
       display: block;
     }
-
-    @media (max-width: 600px) {
-      .menu-contato,
-      .logo-canto,
-      .menu-responsavel {
-        position: static;
-        margin: 10px auto;
-        text-align: center;
-        width: 90%;
-      }
-
-      .logo-canto {
-        display: block;
-        width: 100px;
-      }
-
-      header, section {
-        width: 95%;
-        padding: 10px;
-      }
-
-      .hamburger-menu {
-        position: static;
-        margin: 10px auto;
-      }
-    }
   </style>
 </head>
 <body>
@@ -202,7 +203,7 @@
     <p><i class="fas fa-map-marker-alt"></i> Rua Rio Ibirapuitã, 384 - São Leopoldo, RS</p>
   </div>
 
-  <img src=".imagem.PNG" class="logo-canto" alt="Logo Átomo">
+  <img src="imagem.PNG" class="logo-canto" alt="Logo Átomo">
 
   <header>
     <h1>COMANDER Serviços de Eletrotécnica</h1>
@@ -279,6 +280,7 @@
   </script>
 </body>
 </html>
+
 
 
 
