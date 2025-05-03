@@ -15,7 +15,6 @@
       color: #000;
     }
 
-    /* === Menu de Contato no canto superior esquerdo === */
     .menu-contato {
       position: absolute;
       top: 8px;
@@ -35,7 +34,6 @@
       color: #00ccff;
     }
 
-    /* === Imagem no canto superior direito === */
     .logo-canto {
       position: absolute;
       top: 10px;
@@ -101,7 +99,6 @@
       color: #0066cc;
     }
 
-    /* === Menu de Informações do Responsável Técnico no canto inferior esquerdo === */
     .menu-responsavel {
       position: absolute;
       bottom: 10px;
@@ -114,7 +111,7 @@
       z-index: 1000;
       max-width: 250px;
       box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-      display: none; /* Menu oculto inicialmente */
+      display: none;
     }
 
     .menu-responsavel p {
@@ -126,7 +123,6 @@
       color: #00ccff;
     }
 
-    /* === Botão Voltar ao Topo === */
     #btn-topo {
       position: fixed;
       bottom: 30px;
@@ -149,7 +145,6 @@
       transform: scale(1.1);
     }
 
-    /* === Estilos do Hamburger Menu === */
     .hamburger-menu {
       width: 30px;
       height: 20px;
@@ -160,7 +155,7 @@
       position: absolute;
       bottom: 10px;
       left: 10px;
-      z-index: 1001; /* Para garantir que o botão fique acima do menu */
+      z-index: 1001;
     }
 
     .hamburger-menu .bar {
@@ -170,22 +165,43 @@
       border-radius: 5px;
     }
 
-    /* Mostrar o menu quando a classe 'show' é adicionada */
     .menu-responsavel.show {
       display: block;
     }
+
+    @media (max-width: 600px) {
+      .menu-contato,
+      .logo-canto,
+      .menu-responsavel {
+        position: static;
+        margin: 10px auto;
+        text-align: center;
+        width: 90%;
+      }
+
+      .logo-canto {
+        display: block;
+        width: 100px;
+      }
+
+      header, section {
+        width: 95%;
+        padding: 10px;
+      }
+
+      .hamburger-menu {
+        position: static;
+        margin: 10px auto;
+      }
+    }
   </style>
 </head>
-
 <body>
-
-  <!-- Menu de Contato no canto superior esquerdo -->
   <div class="menu-contato">
     <p><i class="fas fa-phone-alt"></i> (51) 99609-4278</p>
     <p><i class="fas fa-map-marker-alt"></i> Rua Rio Ibirapuitã, 384 - São Leopoldo, RS</p>
   </div>
 
-  <!-- Imagem no canto superior direito -->
   <img src=".imagem.PNG" class="logo-canto" alt="Logo Átomo">
 
   <header>
@@ -217,7 +233,6 @@
     </form>
   </section>
 
-  <!-- Redes Sociais -->
   <div class="social-icons">
     <a href="https://www.facebook.com/profile.php?id=61575279284000" target="_blank"><i class="fab fa-facebook"></i></a>
     <a href="https://www.linkedin.com/in/sandro-reis-sr" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -225,7 +240,6 @@
     <a href="https://www.instagram.com/eletrotecnico.sr.sandro.reis/" target="_blank" style="color: #00ccff;"><i class="fab fa-instagram"></i></a>
   </div>
 
-  <!-- Menu de Informações do Responsável Técnico -->
   <div class="menu-responsavel">
     <p><i class="fas fa-user"></i> Responsável Técnico: Sandro Reis</p>
     <p><i class="fas fa-cogs"></i> CREA: 123456789</p>
@@ -234,19 +248,16 @@
     <p><i class="fas fa-id-card"></i> Habilitação Elétrica: Nº 654321</p>
   </div>
 
-  <!-- Botão Voltar ao Topo -->
   <button id="btn-topo" title="Voltar ao Topo">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Botão Hamburger -->
   <div class="hamburger-menu" onclick="toggleMenu()">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
   </div>
 
-  <!-- Script para o botão -->
   <script>
     window.onscroll = function() {
       let btn = document.getElementById("btn-topo");
@@ -261,15 +272,14 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-    // Função para alternar a visibilidade do menu de informações
     function toggleMenu() {
       var menu = document.querySelector('.menu-responsavel');
-      menu.classList.toggle('show');  // Alterna a visibilidade do menu
+      menu.classList.toggle('show');
     }
   </script>
-
 </body>
 </html>
+
 
 
 
